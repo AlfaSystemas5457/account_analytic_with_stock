@@ -55,7 +55,7 @@ class AddAnalyticModelToStock(models.Model):
             ('name', '=',  inventory_name),
         ], limit=1)
         
-        total_value = sum(line.product_id.list_price * line.product_uom_qty for line in self.move_ids)
+        total_value = sum(line.product_id.standard_price * line.product_uom_qty for line in self.move_ids)
         total_qty = sum(line.product_uom_qty for line in self.move_ids)
         total_products = [(6,0,[line.product_id.id for line in self.move_ids ])]
                                
