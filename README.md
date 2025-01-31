@@ -23,7 +23,7 @@ CTRL + R
 
 ### 🖼️ Ejemplo de configuración de grupos en Odoo:
 
-![Grupos de contabilidad.png](static/description/assets/Grupos de contabilidad.png)
+![Grupos de contabilidad.png](./static/description/assets/Grupos%20de%20contabilidad.png)
 
 ## 📊 Nueva Funcionalidad: UEPS (Últimas Entradas, Primeras Salidas)
 
@@ -31,7 +31,7 @@ Este módulo ahora incluye la opción de UEPS (Últimas Entradas, Primeras Salid
 
 ### 🖼️ Ejemplo del método de costo en Odoo:
 
-![Metodo de costo](static/description/assets/Metodo de costo.png)
+![Metodo de costo](./static/description/assets/Metodo%20de%20costo.png)
 
 ## 📥 Instalación
 
