@@ -1,16 +1,65 @@
-<section class="oe_container oe_dark">
-    <div class="row">
-        <div class="oe_span8">
-            <span>Permite establecer relación entre los movimientos de stock y la cuentas analiticas.</span>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Odoo - Cuentas Analíticas y Stock</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <section class="container py-5">
+        <div class="text-center">
+            <h1 class="fw-bold text-primary">Relación entre Movimientos de Stock y Cuentas Analíticas</h1>
+            <p class="lead">Administra mejor tus movimientos de stock con Odoo y contabilidad analítica.</p>
         </div>
-        <div class="oe_span8">
-            <span>Funciona con las versiones de odoo</span>
+
+        <div class="row justify-content-center my-4">
+            <div class="col-md-8 text-center">
+                <h2 class="fw-semibold text-info">Compatible con Odoo Community</h2>
+            </div>
         </div>
-        <div class="oe_span8">
-            <a href="https://github.com/AlfaSystemas5457/account_analytic_with_stock" class="btn btn-primary"
-                target="_blank">
-                Odoo Community
-            </a>
+
+        <div class="row justify-content-center my-4">
+            <div class="col-md-6 text-center">
+                <a href="https://github.com/AlfaSystemas5457/account_analytic_with_stock" target="_blank"
+                    class="btn btn-primary btn-lg">
+                    <span class="fs-4">Ver en GitHub</span>
+                </a>
+            </div>
         </div>
-    </div>
-</section>
+
+        <div class="row justify-content-center my-5">
+            <div class="col-md-8">
+                <h2 class="fw-semibold text-dark">Configuración necesaria</h2>
+                <p>Para que funcione correctamente, es necesario agregar el usuario a los siguientes grupos:</p>
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>Contabilidad Analítica</strong></li>
+                    <li class="list-group-item"><strong>Mostrar Características de Contabilidad Completas</strong></li>
+                </ul>
+                <p class="mt-3">Después de esto, solo hay que reiniciar el navegador con <kbd>CTRL + R</kbd></p>
+                <div class="text-center">
+                    <img src="./assets/Grupos de contabilidad.png" alt="Grupos de contabilidad"
+                        class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center my-5">
+            <div class="col-md-8">
+                <h2 class="fw-semibold text-dark">Nueva función: UEPS</h2>
+                <p>Se ha agregado la opción de <strong>UEPS (Últimas Entradas, Primeras Salidas)</strong> como método de
+                    costo.</p>
+                <div class="text-center">
+                    <img src="./assets/Metodo de costo.png" alt="Método de costo" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
