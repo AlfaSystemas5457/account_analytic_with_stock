@@ -3,7 +3,7 @@
 Este módulo permite establecer una relación entre los movimientos de stock y las cuentas analíticas en Odoo, facilitando la gestión contable de los productos.
 
 ## 🚀 Compatible con versiones de Odoo  
-Este módulo es compatible con diferentes versiones de *Odoo Community versión 18.0*.
+Este módulo es compatible con diferentes versiones de *Odoo Community*.  
 
 🔗 [Repositorio en GitHub](https://github.com/AlfaSystemas5457/account_analytic_with_stock)
 
@@ -37,12 +37,11 @@ Este módulo ahora incluye la opción de UEPS (Últimas Entradas, Primeras Salid
 
 Para instalar este módulo, sigue estos pasos:
 
-1. Descargar el repositorio:
+- Descargar el repositorio:
 
 ```bash
 git clone https://github.com/AlfaSystemas5457/account_analytic_with_stock.git
 ```
-1. Copiar la carpeta del módulo en la ruta de addons de Odoo.
-1. Actualizar la lista de módulos en Odoo.
-1. Instalar el módulo desde la interfaz de Odoo.
-
+- Copiar la carpeta del módulo en la ruta de addons de Odoo.
+- Actualizar la lista de módulos en Odoo.
+- Instalar el módulo desde la interfaz de Odoo.
