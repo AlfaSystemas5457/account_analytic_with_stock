@@ -3,7 +3,7 @@
 Este módulo permite establecer una relación entre los movimientos de stock y las cuentas analíticas en Odoo, facilitando la gestión contable de los productos.
 
 ## 🚀 Compatible con versiones de Odoo  
-Este módulo es compatible con diferentes versiones de *Odoo Community*.  
+Este módulo es compatible con *Odoo Community 18.0*.
 
 🔗 [Repositorio en GitHub](https://github.com/AlfaSystemas5457/account_analytic_with_stock)
 
