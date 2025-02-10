@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="analytic_distribution_model_form_view_inherit_account_analytic_with_stock" model="ir.ui.view">
+    <record id="analytic_distribution_model_form_view_inherit_account_analytic_with_stock"
+        model="ir.ui.view">
         <field name="name">account.analytic.distribution.model.form.with.stock</field>
         <field name="model">stock.picking</field>
-        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="inherit_id" ref="stock.view_picking_form" />
         <field name="arch" type="xml">
             <xpath expr="//sheet/group/group/field[@name='origin']" position="after">
                 <field name="analytic_account" widget="analytic_account" />
@@ -15,10 +16,10 @@
     <record id="add_products_to_analytic_view_account_analytic_line_form" model="ir.ui.view">
         <field name="name">add.products.to.analytic.view_account.analytic.line.form</field>
         <field name="model">account.analytic.line</field>
-        <field name="inherit_id" ref="account.view_account_analytic_line_form_inherit_account"/>
+        <field name="inherit_id" ref="account.view_account_analytic_line_form_inherit_account" />
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='product_id']" position="replace">
-                <field name="products_ids" invisible="products_ids == False"/>
+            <xpath expr="//field[@name='product_id']" position="after">
+                <field name="products_ids" invisible="products_ids == False" />
             </xpath>
         </field>
     </record>
@@ -26,11 +27,13 @@
     <record id="analytic_add_button_stock_movement_count" model="ir.ui.view">
         <field name="name">analytic.add.button.stock.movement.count</field>
         <field name="model">account.analytic.account</field>
-        <field name="inherit_id" ref="analytic.view_account_analytic_account_form"/>
+        <field name="inherit_id" ref="analytic.view_account_analytic_account_form" />
         <field name="arch" type="xml">
-            <xpath expr="//button[@name='%(analytic.account_analytic_line_action)d']" position="after">
-                <button string="Movimientos de stock" class="oe_stat_button" type="object" name="view_stock_movement" icon="fa-archive" invisible="movement_count == 0">
-                    <field name="movement_count" widget="statinfo"/>
+            <xpath expr="//button[@name='%(analytic.account_analytic_line_action)d']"
+                position="after">
+                <button string="Movimientos de stock" class="oe_stat_button" type="object"
+                    name="view_stock_movement" icon="fa-archive" invisible="movement_count == 0">
+                    <field name="movement_count" widget="statinfo" />
                 </button>
             </xpath>
         </field>
@@ -41,16 +44,27 @@
         <field name="model">stock.move</field>
         <field name="type">list</field>
         <field name="arch" type="xml">
-            <list string="Movimientos de stock" create="0" edit="0" default_order="date desc" duplicate="0">
-                <field name="date" groups="base.group_no_one" decoration-danger="(state not in ('cancel','done')) and date &gt; current_date"/>
-                <field name="reference"/>
-                <field name="product_id" readonly="state == 'done'" optional="show"/>
-                <field name="location_id" options="{'no_create': True}" decoration-muted="location_usage not in ('internal','transit')"/>
-                <field name="location_dest_id" options="{'no_create': True}" decoration-muted="location_dest_usage not in ('internal','transit')"/>
-                <field name="product_uom_qty" sum="Total Demand" readonly="state == 'done'" optional="show"/>
-                <field name="quantity" sum="Total Quantity" decoration-danger="(location_usage in ('internal','transit')) and (location_dest_usage not in ('internal','transit'))" decoration-success="(location_usage not in ('internal','transit')) and (location_dest_usage in ('internal','transit'))" optional="hide"/>
-                <field name="company_id" groups="base.group_multi_company" optional="hide"/>
-                <field name="state" widget="badge" optional="show" decoration-danger="state=='cancel'" decoration-info="state== 'assigned'" decoration-muted="state == 'draft'" decoration-success="state == 'done'" decoration-warning="state not in ('draft','cancel','done','assigned')"/>
+            <list string="Movimientos de stock" create="0" edit="0" default_order="date desc"
+                duplicate="0">
+                <field name="date" groups="base.group_no_one"
+                    decoration-danger="(state not in ('cancel','done')) and date &gt; current_date" />
+                <field name="reference" />
+                <field name="product_id" readonly="state == 'done'" optional="show" />
+                <field name="location_id" options="{'no_create': True}"
+                    decoration-muted="location_usage not in ('internal','transit')" />
+                <field name="location_dest_id" options="{'no_create': True}"
+                    decoration-muted="location_dest_usage not in ('internal','transit')" />
+                <field name="product_uom_qty" sum="Total Demand" readonly="state == 'done'"
+                    optional="show" />
+                <field name="quantity" sum="Total Quantity"
+                    decoration-danger="(location_usage in ('internal','transit')) and (location_dest_usage not in ('internal','transit'))"
+                    decoration-success="(location_usage not in ('internal','transit')) and (location_dest_usage in ('internal','transit'))"
+                    optional="hide" />
+                <field name="company_id" groups="base.group_multi_company" optional="hide" />
+                <field name="state" widget="badge" optional="show"
+                    decoration-danger="state=='cancel'" decoration-info="state== 'assigned'"
+                    decoration-muted="state == 'draft'" decoration-success="state == 'done'"
+                    decoration-warning="state not in ('draft','cancel','done','assigned')" />
             </list>
         </field>
     </record>
